@@ -135,122 +135,122 @@ def test_data_sorter_duplicates_multi_digit():
     # assert actual[2] == expected_frequency
     
 
-# # PHONETIC TRANSLATION
-# def test_phonetic_translation_empty():
-#     # setup
-#     a_string = ""
-#     expected = []
+# PHONETIC TRANSLATION
+def test_phonetic_translation_empty():
+    # setup
+    a_string = ""
+    expected = []
 
-#     # invoke
-#     actual = phonetic_translation(a_string)
+    # invoke
+    actual = phonetic_translation(a_string)
 
-#     # analyze
-#     assert expected == actual
+    # analyze
+    assert expected == actual
 
-# def test_phonetic_translation_one_letter():
-#     # setup
-#     a_string = "q"
-#     expected = ["Quebec"]
+def test_phonetic_translation_one_letter():
+    # setup
+    a_string = "q"
+    expected = ["Quebec"]
 
-#     # invoke
-#     actual = phonetic_translation(a_string)
+    # invoke
+    actual = phonetic_translation(a_string)
 
-#     # analyze
-#     assert expected == actual
+    # analyze
+    assert expected == actual
 
-# def test_phonetic_translation_one_word():
-#     # setup
-#     a_string = "LOVE"
-#     expected = ["Lima", "Oscar", "Victor", "Echo"]
+def test_phonetic_translation_one_word():
+    # setup
+    a_string = "LOVE"
+    expected = ["Lima", "Oscar", "Victor", "Echo"]
 
-#     # invoke
-#     actual = phonetic_translation(a_string)
+    # invoke
+    actual = phonetic_translation(a_string)
 
-#     # analyze
-#     assert expected == actual
+    # analyze
+    assert expected == actual
 
-# def test_phonetic_translation_two_words():
-#     # setup
-#     a_string = "tOp GuN"
-#     expected = ["Tango", "Oscar", "Papa", "Golf", "Uniform", "November"]
+def test_phonetic_translation_two_words():
+    # setup
+    a_string = "tOp GuN"
+    expected = ["Tango", "Oscar", "Papa", "Golf", "Uniform", "November"]
 
-#     # invoke
-#     actual = phonetic_translation(a_string)
+    # invoke
+    actual = phonetic_translation(a_string)
 
-#     # analyze
-#     assert expected == actual
+    # analyze
+    assert expected == actual
 
-# def test_phonetic_translation_punctuation():
-#     # setup
-#     a_string = "a.b!c-a@"
-#     expected = ["Alpha", "Bravo", "Charlie", "Alpha"]
+def test_phonetic_translation_punctuation():
+    # setup
+    a_string = "a.b!c-a@"
+    expected = ["Alpha", "Bravo", "Charlie", "Alpha"]
 
-#     # invoke
-#     actual = phonetic_translation(a_string)
+    # invoke
+    actual = phonetic_translation(a_string)
 
-#     # analyze
-#     assert expected == actual
+    # analyze
+    assert expected == actual
 
 
-# # WORDS BY LETTER
-# def assert_words_by_letter(first_letters, unique_words, result):
-#     """
-#     A helper-function used to verify that the result data structure contains
-#     the correct values. This function is needed by the words_by_letters tests.
-#     """
-#     assert len(first_letters) == len(result)
-#     for index in range(len(first_letters)):
-#         first_letter = first_letters[index]
-#         words = unique_words[index]
-#         result_words = result[first_letter]
-#         assert len(words) == len(result_words)
-#         for word in words:
-#             assert word in result_words
+# WORDS BY LETTER
+def assert_words_by_letter(first_letters, unique_words, result):
+    """
+    A helper-function used to verify that the result data structure contains
+    the correct values. This function is needed by the words_by_letters tests.
+    """
+    assert len(first_letters) == len(result)
+    for index in range(len(first_letters)):
+        first_letter = first_letters[index]
+        words = unique_words[index]
+        result_words = result[first_letter]
+        assert len(words) == len(result_words)
+        for word in words:
+            assert word in result_words
 
-# def test_words_by_letter_empty():
-#     # setup
-#     a_string = ""
+def test_words_by_letter_empty():
+    # setup
+    a_string = ""
 
-#     # invoke
-#     data = words_by_letter(a_string)
+    # invoke
+    data = words_by_letter(a_string)
 
-#     # analyze
-#     assert 0 == len(data)
+    # analyze
+    assert 0 == len(data)
 
-# def test_words_by_letter_one():
-#     # setup
-#     a_string = "ant"
-#     first_letters = "a"
-#     unique_words = [["ant"]]
+def test_words_by_letter_one():
+    # setup
+    a_string = "ant"
+    first_letters = "a"
+    unique_words = [["ant"]]
 
-#     # invoke
-#     result = words_by_letter(a_string)
+    # invoke
+    result = words_by_letter(a_string)
 
-#     # analyze
-#     assert_words_by_letter(first_letters, unique_words, result)
+    # analyze
+    assert_words_by_letter(first_letters, unique_words, result)
 
-# def test_words_by_letter_same():
-#     # setup
-#     a_string = "ant an aunt ant ant aunt"
-#     first_letters = "a"
-#     unique_words = [["ant", "an", "aunt"]]
+def test_words_by_letter_same():
+    # setup
+    a_string = "ant an aunt ant ant aunt"
+    first_letters = "a"
+    unique_words = [["ant", "an", "aunt"]]
 
-#     # invoke
-#     result = words_by_letter(a_string)
+    # invoke
+    result = words_by_letter(a_string)
 
-#     # analyze
-#     assert_words_by_letter(first_letters, unique_words, result)
+    # analyze
+    assert_words_by_letter(first_letters, unique_words, result)
 
-# def test_words_by_letter_example():
-#     # setup
-#     a_string = "The cat in the hat is back with a bright blue bat out in " \
-#         "the back"
-#     first_letters = "acbhiotw"
-#     unique_words = [["a"], ["cat"], ["back", "bright", "blue", "bat"], ["hat"],
-#         ["in", "is"], ["out"], ["the"], ["with"]]
+def test_words_by_letter_example():
+    # setup
+    a_string = "The cat in the hat is back with a bright blue bat out in " \
+        "the back"
+    first_letters = "acbhiotw"
+    unique_words = [["a"], ["cat"], ["back", "bright", "blue", "bat"], ["hat"],
+        ["in", "is"], ["out"], ["the"], ["with"]]
 
-#     # invoke
-#     result = words_by_letter(a_string)
+    # invoke
+    result = words_by_letter(a_string)
 
-#     # analyze
-#     assert_words_by_letter(first_letters, unique_words, result)
+    # analyze
+    assert_words_by_letter(first_letters, unique_words, result)
