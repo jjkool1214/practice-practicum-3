@@ -62,77 +62,77 @@ def test_euclidian_distance_5D():
 
 
 
-# # DATA SORTER
-# def test_data_sorter_empty():
-#     # setup
-#     expected = []
-#     data = []
-#     old_data = data[:]
+# DATA SORTER
+def test_data_sorter_empty():
+    # setup
+    expected = []
+    data = []
+    old_data = data[:]
 
-#     # invoke
-#     actual = data_sorter(data)
+    # invoke
+    actual = data_sorter(data)
 
-#     # analyze
-#     assert data == old_data
-#     for i in actual:
-#         assert i == expected
+    # analyze
+    assert data == old_data
+    for i in actual:
+        assert i == expected
 
-# def test_data_sorter_standard():
-#     # setup
-#     data = [10,100,15,11,4,5,2]
-#     old_data = data[:]
+def test_data_sorter_standard():
+    # setup
+    data = [10,100,15,11,4,5,2]
+    old_data = data[:]
 
-#     expected_alphabetical = [5,4,10,100,15,11,2]
-#     expected_digits = [100,10,11,15,2,4,5]
+    expected_alphabetical = [5,4,10,100,15,11,2]
+    expected_digits = [100,10,11,15,2,4,5]
 
-#     # invoke
-#     actual = data_sorter(data)
+    # invoke
+    actual = data_sorter(data)
 
-#     # analyze
-#     assert data == old_data
-#     assert actual[0] == expected_alphabetical
-#     assert actual[1] == expected_digits
-#     # BONUS
-#     # expected_frequency = [10,100,15,11,4,5,2]
-#     # assert actual[2] == expected_frequency
+    # analyze
+    assert data == old_data
+    assert actual[0] == expected_alphabetical
+    assert actual[1] == expected_digits
+    # BONUS
+    # expected_frequency = [10,100,15,11,4,5,2]
+    # assert actual[2] == expected_frequency
 
-# def test_data_sorter_duplicates():
-#     # setup
-#     data = [1,3,5,2,1,3,1]
-#     old_data = data[:]
+def test_data_sorter_duplicates():
+    # setup
+    data = [1,3,5,2,1,3,1]
+    old_data = data[:]
 
-#     expected_alphabetical = [5,1,1,1,3,3,2]
-#     expected_digits = [1,1,1,2,3,3,5]
+    expected_alphabetical = [5,1,1,1,3,3,2]
+    expected_digits = [1,1,1,2,3,3,5]
 
-#     # invoke
-#     actual = data_sorter(data)
+    # invoke
+    actual = data_sorter(data)
 
-#     # analyze
-#     assert data == old_data
-#     assert actual[0] == expected_alphabetical
-#     assert actual[1] == expected_digits
-#     # BONUS
-#     # expected_frequency = [1,1,1,3,3,5,2]
-#     # assert actual[2] == expected_frequency
+    # analyze
+    assert data == old_data
+    assert actual[0] == expected_alphabetical
+    assert actual[1] == expected_digits
+    # BONUS
+    # expected_frequency = [1,1,1,3,3,5,2]
+    # assert actual[2] == expected_frequency
 
-# def test_data_sorter_duplicates_multi_digit():
-#     # setup
-#     data = [10,3000,5,20,10,3,100,3000,3120,100]
-#     old_data = data[:]
+def test_data_sorter_duplicates_multi_digit():
+    # setup
+    data = [10,3000,5,20,10,3,100,3000,3120,100]
+    old_data = data[:]
 
-#     expected_alphabetical = [5,10,10,100,100,3000,3,3000,3120,20]
-#     expected_digits = [3000,3000,3120,100,100,10,10,20,3,5]
+    expected_alphabetical = [5,10,10,100,100,3000,3,3000,3120,20]
+    expected_digits = [3000,3000,3120,100,100,10,10,20,3,5]
 
-#     # invoke
-#     actual = data_sorter(data)
+    # invoke
+    actual = data_sorter(data)
 
-#     # analyze
-#     assert data == old_data
-#     assert actual[0] == expected_alphabetical
-#     assert actual[1] == expected_digits
-#     # BONUS
-#     # expected_frequency = [10,10,3000,3000,100,100,5,20,3,3120]
-#     # assert actual[2] == expected_frequency
+    # analyze
+    assert data == old_data
+    assert actual[0] == expected_alphabetical
+    assert actual[1] == expected_digits
+    # BONUS
+    # expected_frequency = [10,10,3000,3000,100,100,5,20,3,3120]
+    # assert actual[2] == expected_frequency
     
 
 # # PHONETIC TRANSLATION
